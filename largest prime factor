@@ -1,0 +1,20 @@
+
+Scanner sc = new Scanner(System.in);
+int num=2;
+int target = sc.nextInt();
+
+if(target<0 || target> 1000000) {
+    System.out.println("올바른 값을 입력해주세요");
+}
+
+else {
+  while (num<target) {
+    if(target % num == 0) {
+       target = target / num;
+      num= 2;
+    }
+    else
+     num++;
+  }
+  System.out.println(num);
+}
